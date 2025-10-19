@@ -74,7 +74,7 @@ public class Comparing {
                                 String newText = updates.get(currentHeader);
                                 for (Text t : sectionTexts) {
                                     String sourceFile = SourceFile.SourceFileGet(currentHeader, BaseEconomy, LocationFile, OverviewsFile, KnowledgeBaseEconomy, locationKnowledgeBase, GeneralOverviews);
-                                    logger.info("Updating \"{}\"\n to \"{}\"\n from the file {}\n", t.getValue(), newText, sourceFile);
+                                    logger.info("Updating \"{}\" to \"{}\" from the file {}", t.getValue(), newText, sourceFile);
                                     t.setValue("");
                                 }
                                 if (!sectionTexts.isEmpty()) {
@@ -97,7 +97,7 @@ public class Comparing {
                 String newText = updates.get(currentHeader);
                 for (Text t : sectionTexts) {
                     String sourceFile = SourceFile.SourceFileGet(currentHeader, BaseEconomy, LocationFile, OverviewsFile, KnowledgeBaseEconomy, locationKnowledgeBase, GeneralOverviews);
-                    logger.info("Updating \"{}\"\n to \"{}\"\n from the file {}\n", t.getValue(), newText, sourceFile);
+                    logger.info("Updating \"{}\" to \"{}\" from the file {}", t.getValue(), newText, sourceFile);
                     t.setValue("");
                 }
                 if (!sectionTexts.isEmpty()) {
@@ -106,8 +106,8 @@ public class Comparing {
             }
 
             String outputName = "modified_" + new File(FileName).getName();
-            logger.info("Updating document's valuation date to {}\n", newDate);
-            logger.info("Saving modified file with new data as {}\n", outputName);
+            logger.info("Updating document's valuation date to {}", newDate);
+            logger.info("Saving modified file with new data as {}", outputName);
             wordPackage.save(new File(outputName));
 
         } catch (Exception e) {

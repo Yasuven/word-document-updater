@@ -21,7 +21,7 @@ public class Main {
         //String FileName = "TN Tulika tn 20-5 Kristiine.docx";
         Set<String> allowedLocations = Set.of("Õismäe", "Kristiine");
 
-        logger.info("Opening file with name {}\n", FileName);
+        logger.info("Opening file with name {}.", FileName);
 
         List<String> MainFile = Location.LocationFinder(new File(FileName));
         String Location = null;

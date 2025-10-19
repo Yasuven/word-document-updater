@@ -71,7 +71,7 @@ public class Extract {
                 }
             }
             if (currentHeader != null) {
-                logger.info("Saving key {}, from {}\n as value \"{}\"\n", currentHeader, docx, currentSectionText.toString().trim());
+                logger.info("Saving key {}, from {} as value \"{}\"", currentHeader, docx, currentSectionText.toString().trim());
                 Contents.put(currentHeader, currentSectionText.toString().trim());
             }
             return Contents;
